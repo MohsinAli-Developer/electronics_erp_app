@@ -40,11 +40,20 @@ class _RegisterScreenState extends State<RegisterScreen> {
       ),
     );
 
+    // if (success) {
+    //   _nameController.clear();
+    //   _passwordController.clear();
+    //   setState(() => _selectedRole = 1);
+    // }
     if (success) {
-      _nameController.clear();
-      _passwordController.clear();
-      setState(() => _selectedRole = 1);
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text("Registration Successful!")),
+      );
+
+      // 🔥 Redirect to Dashboard
+      Navigator.pushReplacementNamed(context, "/dashboard");
     }
+
   }
 
   @override
