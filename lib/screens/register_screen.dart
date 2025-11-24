@@ -84,8 +84,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     prefixIcon: Icon(Icons.work),
                   ),
                   items: const [
-                    DropdownMenuItem(value: 1, child: Text("User")),
-                    DropdownMenuItem(value: 2, child: Text("Admin")),
+                    DropdownMenuItem(value: 1, child: Text("Admin")),
+                    DropdownMenuItem(value: 2, child: Text("User")),
                     DropdownMenuItem(value: 3, child: Text("Manager")),
                   ],
                   onChanged: (value) => setState(() => _selectedRole = value!),
